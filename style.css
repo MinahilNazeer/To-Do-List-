@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+   font-family: "Just Another Hand", cursive;
+  font-style: normal;
+    font-weight: 400;
+
+}
+.container{
+    width: 100%;
+    background: linear-gradient(120deg,rgb(210, 93, 93),rgb(185, 55, 93));
+    min-height: 100vh;
+    padding: 10px
+    
+}
+.todolist{
+
+    width: 100%;
+    max-width: 540px;
+    background-color :rgb(231, 211, 211);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todolist h1{
+    color: rgb(185, 55, 93);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+.todolist h1 img{
+    margin-left: 10px;
+    width: 30px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    background-color:rgb(238, 238, 238) ;
+
+}
+input{
+    flex: 1;
+    border: none;
+   outline: none;
+   padding: 10px;
+   background: transparent;
+   font-size: 20px;
+   color:  rgb(185, 55, 93);
+}
+button{
+     border: none;
+   outline: none;
+   padding: 16px 50px;
+   color: rgb(231, 211, 211) ;
+   font-size: 25px;
+   cursor: pointer;
+   border-radius: 30px;
+   background-color: rgb(210, 93, 93) ;
+}
+ul li {
+    list-style: none;
+    font-size: 25px;
+    padding: 12px 0 12px 50px; 
+    user-select: none;
+    position: relative;
+    color: rgb(185, 55, 93);
+        display: flex;
+    align-items: center; 
+}
+
+ul li::before{
+    content:' ';
+    position: absolute;
+    height: 26px;
+    width: 27px;
+    border-radius: 50%;
+    background-image: url(round\ \(1\).png);
+    background-size: cover ;
+    background-position: center ;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color:rgb(185, 55, 93) ;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: rgb(185, 55, 93) ;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+        font-weight: bolder;
+        
+
+}
+ul li span:hover{
+    background-color: rgb(207, 147, 147);
+}
+button:hover{
+    transform: scale(1.05); 
+  transition: all 0.3s ease; 
+}
+li:hover{
+    transform: scale(1.05); 
+  transition: all 0.3s ease; 
+}
+
+@media (max-width: 768px) {
+  .todolist {
+    max-width: 90%;
+    padding: 20px 15px 40px;
+  }
+
+  .todolist h1 {
+    font-size: 2rem;
+  }
+
+  .row {
+    flex-direction: row;   
+    gap: 10px;
+    padding-left: 0; 
+  }
+
+  input {
+    flex: 1;            
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    flex-shrink: 0;     
+  }
+
+  ul li {
+    font-size: 20px;
+    padding: 10px 0 10px 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todolist {
+    max-width: 95%;
+    margin: 50px auto 20px;
+    padding: 15px 10px 30px;
+  }
+
+  .todolist h1 {
+    font-size: 1.5rem;
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .row {
+    gap: 10px;
+    padding-left: 0; 
+  }
+
+  input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  button {
+    width: 40%;
+    font-size: 18px;
+    padding: 12px;
+
+    
+  }
+
+  ul li {
+    font-size: 18px;
+    padding: 8px 0 8px 40px;
+  }
+}
