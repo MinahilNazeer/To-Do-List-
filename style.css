@@ -12,7 +12,7 @@
 }
 .container{
     width: 100%;
-    background: linear-gradient(120deg,rgb(210, 93, 93),rgb(185, 55, 93));
+    background: linear-gradient(120deg,rgb(216, 143, 143),rgb(194, 66, 105));
     min-height: 100vh;
     padding: 10px
     
@@ -196,4 +196,5 @@ li:hover{
     font-size: 18px;
     padding: 8px 0 8px 40px;
   }
+
 }
